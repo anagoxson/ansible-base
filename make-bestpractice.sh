@@ -192,7 +192,7 @@ function create_vagrantfile {
 
 Vagrant.configure("2") do |config|
   config.vm.define "host1" do |h|
-    h.vm.box = "bento/centos-7"
+    h.vm.box = "almalinux/8"
     h.vm.network "private_network", ip: "192.168.33.10"
     h.vm.provider "virtualbox" do |vb|
       vb.memory = "1024"
