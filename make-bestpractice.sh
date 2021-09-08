@@ -23,6 +23,7 @@ all:
     ansible_user: vagrant
     ansible_port: 22
   hosts:
+
 EOT
 
   for group in ${A_GROUPS[@]}
