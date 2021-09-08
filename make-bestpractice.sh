@@ -191,10 +191,12 @@ function create_vagrantfile {
 # vi: set ft=ruby :
 
 Vagrant.configure("2") do |config|
-  config.vm.box = "bento/centos-7"
-  config.vm.network "private_network", ip: "192.168.33.10"
-  config.vm.provider "virtualbox" do |vb|
-    vb.memory = "1024"
+  config.vm.define "host1" do |h|
+    h.vm.box = "bento/centos-7"
+    h.vm.network "private_network", ip: "192.168.33.10"
+    h.vm.provider "virtualbox" do |vb|
+      vb.memory = "1024"
+    end
   end
 end
 EOT
